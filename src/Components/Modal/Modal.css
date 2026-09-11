@@ -1,0 +1,37 @@
+.modal-content {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-initials {
+  font-weight: bold;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  border-radius: 0.5rem;
+  min-height: 48px;
+}
+
+.form-check-label {
+  font-size: 0.95rem;
+}
+
+.btn-lg {
+  padding: 0.65rem 1.25rem;
+  font-weight: 500;
+}
+.custom-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+.getGeo {
+  margin-right: 15px;
+}

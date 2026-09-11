@@ -1,0 +1,568 @@
+/* ===== CARDS ===== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-head h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.card-head .sub {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+.card-body {
+  padding: 16px 18px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    filter 0.15s,
+    background 0.15s,
+    transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-primary {
+  background: var(--pine);
+  color: #fff;
+  --bs-btn-border-color: var(--pine) !important;
+}
+
+.btn-primary:hover {
+  background: var(--pine-light);
+}
+
+.btn-outline {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+  background: var(--bg);
+}
+
+.btn-blue {
+  background: var(--dairy-blue);
+  color: #fff;
+}
+
+.btn-blue:hover {
+  filter: brightness(1.08);
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 5px 8px;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 6px;
+}
+
+.btn-danger-ghost {
+  background: transparent;
+  color: var(--danger);
+  padding: 5px 8px;
+}
+
+.btn-danger-ghost:hover {
+  background: #f7e7e3;
+  border-radius: 6px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== TABLE ===== */
+
+/* Any card/card-body that wraps a table directly becomes its own
+   horizontal scroll region, so the sidebar/toolbar/page never move —
+   only the table strip scrolls on narrow screens. */
+.card:has(> table),
+.card-body:has(> table) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead th {
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: background 0.15s;
+}
+
+tbody tr:hover {
+  background: #fafcfb;
+}
+
+.row-new {
+  animation: rowIn 0.5s ease;
+}
+
+@keyframes rowIn {
+  from {
+    background: var(--butter-light);
+  }
+  to {
+    background: transparent;
+  }
+}
+
+.cell-primary {
+  font-weight: 600;
+}
+
+.cell-sub {
+  font-size: 11.5px;
+  color: var(--text-faint);
+  margin-top: 1px;
+}
+
+.num {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+}
+
+.empty-row td {
+  padding: 36px 14px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+/* ===== TAGS ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.tag-green {
+  background: #e7f3eb;
+  color: var(--success);
+}
+.tag-green .tag-dot {
+  background: var(--success);
+}
+
+.tag-amber {
+  background: var(--butter-light);
+  color: #8a5a17;
+}
+.tag-amber .tag-dot {
+  background: var(--butter);
+}
+
+.tag-red {
+  background: #f7e7e3;
+  color: var(--danger);
+}
+.tag-red .tag-dot {
+  background: var(--danger);
+}
+
+.tag-blue {
+  background: var(--dairy-blue-light);
+  color: var(--dairy-blue);
+}
+.tag-blue .tag-dot {
+  background: var(--dairy-blue);
+}
+
+.tag-gray {
+  background: #edf1ef;
+  color: var(--text-muted);
+}
+.tag-gray .tag-dot {
+  background: var(--text-faint);
+}
+
+.tag-light-orange {
+  background: var(--butter-light);
+  color: #8a5a17;
+}
+
+.tag-light-orange .tag-dot {
+  background: var(--butter);
+}
+
+/* ===== TOOLBAR (search/filter row above tables) ===== */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  background: var(--surface);
+  color: var(--text);
+  min-width: 190px;
+}
+
+select.filter-input {
+  color: var(--text-muted);
+}
+
+.result-count {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-left: 2px;
+}
+
+/* ===== FORM ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.field input,
+.field select {
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.filter-input:focus {
+  outline: 2px solid var(--dairy-blue);
+  outline-offset: 0px;
+  border-color: transparent;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field-hint {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.field-error {
+  font-size: 11px;
+  color: var(--danger);
+  display: none;
+}
+
+.field.invalid input,
+.field.invalid select {
+  border-color: var(--danger);
+}
+
+.field.invalid .field-error {
+  display: block;
+}
+
+/* ===== Page content wrapper ===== */
+.content {
+  padding: 24px 28px 60px;
+  max-width: 1400px;
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 22px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.page-size-select {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #374151;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-nav-btn,
+.page-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.page-nav-btn:hover:not(:disabled),
+.page-number:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+}
+
+.page-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-number.active {
+  background: var(--pine, #16a34a);
+  border-color: var(--pine, #16a34a);
+  color: #fff;
+}
+
+.page-ellipsis {
+  width: 32px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+@media (max-width: 1080px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Keep table columns at a readable width and let the card scroll
+     horizontally instead of squashing every cell unreadably. */
+  .card:has(> table) table,
+  .card-body:has(> table) table {
+    min-width: 640px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px 12px;
+  }
+
+  .card-body {
+    padding: 14px;
+  }
+
+  .toolbar {
+    gap: 10px;
+  }
+
+  .pagination-bar {
+    padding: 12px 14px;
+  }
+}
+
+/* Actions trigger button */
+.action-btn {
+  border: 1px solid #e4e4e7;
+  background: #fff;
+  color: #3f3f46;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.action-btn:hover,
+.action-btn:focus {
+  background: #f9fafb !important;
+  border-color: #d4d4d8 !important;
+  color: #18181b !important;
+}
+
+.action-btn:after {
+  vertical-align: 2px;
+}
+
+/* Dropdown menu container */
+.action-menu {
+  border-radius: 10px !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 10px 24px -6px rgba(0, 0, 0, 0.12) !important;
+  padding: 6px !important;
+}
+
+/* Menu items */
+.action-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  color: #3f3f46;
+  transition: background 0.12s ease;
+}
+
+.action-item:hover,
+.action-item:focus {
+  background-color: #f4f4f5 !important;
+  color: #18181b;
+}
+
+.action-item.text-danger:hover,
+.action-item.text-danger:focus {
+  background-color: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+
+.action-item i {
+  font-size: 14px;
+  width: 16px;
+}
+
+/* Date Picker */
+.react-datepicker__close-icon::after {
+  width: 18px !important;
+  height: 18px !important;
+
+  padding: 0 !important;
+
+  background: #edf2f5 !important;
+
+  color: #6b7680 !important;
+
+  font-size: 12px !important;
+
+  line-height: 18px !important;
+
+  border-radius: 5px !important;
+}

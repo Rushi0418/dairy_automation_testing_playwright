@@ -1,0 +1,369 @@
+.chemist-remarks-canvas {
+  width: calc(100% - 240px) !important;
+  /* max-width: 95vw; */
+  border-left: 1px solid #dee2e6;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.chemist-canvas-header {
+  position: relative;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e9ecef;
+  background: #ffffff;
+}
+
+.chemist-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.chemist-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.chemist-subtitle {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.header-separator {
+  margin: 0 8px;
+  color: #adb5bd;
+}
+
+.chemist-close-btn {
+  /* width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0; */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.chemist-canvas-body {
+  background: #f7f8fa;
+  padding: 18px 22px !important;
+  overflow-y: auto;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.chemist-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  background: #ffffff;
+
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+
+  margin-bottom: 14px;
+
+  overflow: hidden;
+}
+
+.summary-item {
+  padding: 12px 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  border-right: 1px solid #e9ecef;
+}
+
+.summary-item:last-child {
+  border-right: none;
+}
+
+.summary-item span {
+  font-size: 11px;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.summary-item strong {
+  font-size: 14px;
+  color: #212529;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.chemist-info {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 13px;
+
+  margin-bottom: 14px;
+
+  background: #eef6ff;
+
+  border: 1px solid #cfe2ff;
+
+  border-radius: 8px;
+
+  color: #24527a;
+
+  font-size: 13px;
+}
+
+.chemist-info i {
+  font-size: 16px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.chemist-table-wrapper {
+  background: #ffffff;
+
+  border: 1px solid #dee2e6;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.chemist-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.chemist-table thead th {
+  background: #f1f3f5;
+
+  color: #495057;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+
+  padding: 11px 12px;
+
+  border-bottom: 1px solid #dee2e6;
+
+  text-align: left;
+}
+
+.chemist-table tbody td {
+  padding: 9px 12px;
+
+  border-bottom: 1px solid #edf0f2;
+
+  vertical-align: middle;
+}
+
+.chemist-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.chemist-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.sr-column {
+  width: 45px !important;
+  text-align: center !important;
+  color: #6c757d;
+}
+
+.reading-column {
+  width: 145px;
+}
+
+.remark-column {
+  width: 320px;
+}
+
+/* =========================
+   PARAMETER
+========================= */
+
+.parameter-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.parameter-unit {
+  font-size: 11px;
+  color: #8a9299;
+  margin-top: 2px;
+}
+
+/* =========================
+   READING
+========================= */
+
+.reading-value {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 30px;
+
+  padding: 4px 10px;
+
+  background: #f8f9fa;
+
+  border: 1px solid #e1e5e8;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #343a40;
+}
+
+/* =========================
+   REMARK INPUT
+========================= */
+
+.remark-input {
+  width: 100%;
+
+  height: 36px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #ced4da;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.remark-input:focus {
+  border-color: #86b7fe;
+
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.remark-input::placeholder {
+  color: #adb5bd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.chemist-canvas-footer {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 22px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #dee2e6;
+}
+
+.chemist-canvas-footer .btn {
+  min-width: 110px;
+}
+
+.accept-reject-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  /* row-gap: 4; */
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .chemist-remarks-canvas {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .chemist-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-item {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .summary-item:last-child {
+    border-bottom: none;
+  }
+
+  .chemist-canvas-body {
+    padding: 14px 10px !important;
+  }
+
+  .chemist-table {
+    min-width: 650px;
+  }
+
+  .chemist-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .remark-column {
+    width: 260px;
+  }
+}

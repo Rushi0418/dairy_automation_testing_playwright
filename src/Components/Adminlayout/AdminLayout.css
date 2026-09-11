@@ -1,0 +1,34 @@
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+.layout-content {
+  flex: 1;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 24px;
+  background: #f5f6fa;
+}
+
+/* Mobile: sidebar becomes a fixed, icon-only rail (see Sidebar.css),
+   so push the content over by that rail's width instead of removing
+   the offset entirely. */
+@media (max-width: 720px) {
+  .layout-content {
+    margin-left: var(--sidebar-w-collapsed);
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-content {
+    margin-left: 60px;
+  }
+}

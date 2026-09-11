@@ -1,0 +1,650 @@
+/* .offcanvas.offcanvas-end.custom-offcanvas-end-activity {
+   
+  width: calc(100% - 238px);
+}
+
+.custom-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+.custom-offcanvas-end {
+  border-left: 1px solid #dee2e6;  
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);  
+}
+
+.custom-pin .pin {
+  width: 20px;
+  height: 20px;
+  background: rgb(236, 136, 5);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -10px;
+}
+
+.custom-pin .pin::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin: 3px 0 0 3px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.custom-pin .pulse {
+  width: 20px;
+  height: 20px;
+  background: rgba(236, 136, 5, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  animation: pulse 2s infinite;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  display: none;
+} */
+
+.offcanvas.offcanvas-end.custom-offcanvas-end-activity {
+  width: calc(100% - 240px);
+  /* max-width: 1100px; */
+}
+
+.custom-offcanvas-end-activity {
+  border-left: 1px solid #dee2e6;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+.custom-print-btn {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  width: 120px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
+}
+
+/* =========================================================
+   OFFCANVAS BODY
+   ========================================================= */
+
+.challan-offcanvas-body {
+  background: #eef1f4;
+  padding: 24px 12px 60px !important;
+  overflow-y: auto;
+}
+
+/* =========================================================
+   CHALLAN SHEET
+   ========================================================= */
+
+.challan-sheet {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid #2b2b2b;
+  padding: 22px 26px 18px;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   ORGANIZATION
+   ========================================================= */
+
+.challan-org-name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0 0 10px;
+  border-bottom: 2px solid #2b2b2b;
+  padding-bottom: 10px;
+}
+
+/* =========================================================
+   DOCUMENT TITLE
+   ========================================================= */
+
+.challan-doc-title {
+  text-align: center;
+  margin: 12px 0 2px;
+}
+
+.challan-main-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.challan-sub-title {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.challan-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 20px;
+  margin: 18px 0 14px;
+  font-size: 13.5px;
+}
+
+.challan-field {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  min-width: 0;
+}
+
+.challan-field label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.challan-field span {
+  flex: 1;
+  min-width: 0;
+  color: #1a1a1a;
+
+  border-bottom: 1px dotted #999;
+
+  padding: 1px 2px;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   RESULTS TABLE
+   ========================================================= */
+
+.challan-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font-size: 13.5px;
+}
+
+.challan-results-table th,
+.challan-results-table td {
+  border: 1px solid #2b2b2b;
+  padding: 5px 8px;
+}
+
+.challan-results-table th {
+  background: #f4f4f4;
+  font-weight: 700;
+  text-align: left;
+}
+
+.challan-srno-header {
+  width: 36px;
+}
+
+.challan-results-header {
+  width: 26%;
+}
+
+.challan-srno {
+  width: 36px;
+  text-align: center;
+}
+
+.challan-narration {
+  width: 44%;
+}
+
+.challan-result {
+  width: 26%;
+}
+
+.challan-remark {
+  width: 30%;
+}
+
+/* =========================================================
+   SEALED
+   ========================================================= */
+
+.challan-sealed-row {
+  margin-top: 12px;
+  font-size: 13.5px;
+
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.challan-sealed-row label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.challan-sealed-row span {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================================================
+   SIGNATURES
+   ========================================================= */
+
+.challan-sign-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+  border-top: 1px solid #2b2b2b;
+}
+
+.challan-sign-row > div {
+  padding: 14px 4px 4px;
+  font-size: 13.5px;
+  font-weight: 700;
+  border-right: 1px solid #2b2b2b;
+}
+
+.challan-sign-row > div:last-child {
+  border-right: none;
+}
+
+/* =========================================================
+   RECEIVER TABLE
+   ========================================================= */
+
+.challan-receiver {
+  margin-top: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.challan-receiver th,
+.challan-receiver td {
+  border: 1px solid #2b2b2b;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.challan-receiver th {
+  background: #f4f4f4;
+  font-weight: 700;
+}
+
+.challan-receiver td {
+  height: 38px;
+}
+
+.challan-header {
+  text-align: center;
+  border-bottom: 2px solid #2b2b2b;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.challan-org-name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.challan-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 4px;
+
+  font-size: 11px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-separator {
+  color: #777;
+}
+
+/* =========================================================
+   SEALED
+   ========================================================= */
+
+.challan-sealed-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 12px;
+  font-size: 13.5px;
+}
+
+.challan-sealed-row > label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sealed-item {
+  /* display: flex; */
+  align-items: left;
+  gap: 16px;
+  flex: 1;
+}
+
+.sealed-line {
+  flex: 1;
+  min-height: 20px;
+  border-bottom: 1px solid #2b2b2b;
+  padding: 0 5px 2px;
+  text-align: start;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .offcanvas.offcanvas-end.custom-offcanvas-end-activity {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .challan-offcanvas-body {
+    padding: 16px 8px 40px !important;
+  }
+
+  .challan-sheet {
+    padding: 16px 14px;
+  }
+
+  .challan-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .challan-org-name {
+    font-size: 18px;
+  }
+
+  .challan-main-title {
+    font-size: 14px;
+  }
+
+  .challan-sub-title {
+    font-size: 9px;
+  }
+
+  .challan-results-table {
+    font-size: 11px;
+  }
+
+  .challan-results-table th,
+  .challan-results-table td {
+    padding: 4px 5px;
+  }
+
+  .challan-sealed-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* =========================================================
+   PRINT SETTINGS
+   ========================================================= */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 100%;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  body.printing-challan {
+    background: #ffffff !important;
+  }
+
+  /*
+       Hide the application visually while printing.
+       IMPORTANT:
+       We don't use visibility:hidden on everything because
+       that can still reserve layout space and create blank pages.
+    */
+
+  body.printing-challan #root > * {
+    display: none !important;
+  }
+
+  /*
+       Show the currently opened Offcanvas.
+    */
+
+  body.printing-challan #root > .offcanvas {
+    display: block !important;
+  }
+
+  /*
+       The Offcanvas itself becomes a normal A4 document.
+    */
+
+  body.printing-challan .offcanvas.custom-offcanvas-end-activity {
+    position: static !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    transform: none !important;
+
+    overflow: visible !important;
+
+    visibility: visible !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    background: #ffffff !important;
+  }
+
+  /*
+       Hide the Offcanvas header completely.
+    */
+
+  body.printing-challan .custom-offcanvas-end-activity .offcanvas-header {
+    display: none !important;
+  }
+
+  /*
+       Body becomes the print page.
+    */
+
+  body.printing-challan .custom-offcanvas-end-activity .offcanvas-body {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    overflow: visible !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    background: #ffffff !important;
+  }
+
+  /*
+       ACTUAL CHALLAN
+    */
+
+  body.printing-challan #dispatch-challan {
+    display: block !important;
+
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 10mm 12mm 8mm !important;
+
+    box-sizing: border-box !important;
+
+    background: #ffffff !important;
+
+    border: 2px solid #2b2b2b !important;
+
+    overflow: visible !important;
+
+    color: #000000 !important;
+
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    break-before: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /*
+       Hide buttons.
+    */
+
+  body.printing-challan .challan-print-btn,
+  body.printing-challan .custom-close-btn {
+    display: none !important;
+  }
+
+  /*
+       Prevent individual sections from breaking.
+    */
+
+  body.printing-challan .challan-org-name,
+  body.printing-challan .challan-doc-title,
+  body.printing-challan .challan-meta,
+  body.printing-challan .challan-results-table,
+  body.printing-challan .challan-sealed-row,
+  body.printing-challan .challan-sign-row,
+  body.printing-challan .challan-receiver {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /*
+       Table should stay together.
+    */
+
+  body.printing-challan .challan-results-table {
+    width: 100% !important;
+
+    margin-top: 6px !important;
+
+    border-collapse: collapse !important;
+
+    page-break-inside: avoid !important;
+  }
+
+  /*
+       Make sure the receiver table stays at the bottom
+       of the challan and its border is visible.
+    */
+
+  body.printing-challan .challan-receiver {
+    width: 100% !important;
+
+    margin-top: 0 !important;
+
+    border-collapse: collapse !important;
+
+    page-break-inside: avoid !important;
+  }
+
+  /*
+       Preserve borders.
+    */
+
+  body.printing-challan .challan-results-table th,
+  body.printing-challan .challan-results-table td,
+  body.printing-challan .challan-receiver th,
+  body.printing-challan .challan-receiver td {
+    border: 1px solid #2b2b2b !important;
+
+    color: #000000 !important;
+  }
+
+  /*
+       Keep the outer bottom line of the challan.
+    */
+
+  body.printing-challan #dispatch-challan {
+    border-bottom: 2px solid #2b2b2b !important;
+  }
+
+  /*
+       Remove Bootstrap transitions that can interfere
+       with printing.
+    */
+
+  body.printing-challan .offcanvas {
+    transition: none !important;
+  }
+}
